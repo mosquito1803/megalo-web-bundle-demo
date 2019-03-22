@@ -1,27 +1,39 @@
-import Router from  'vue-router'
 import Vue from 'vue'
-import Index from '../views/index/index.vue'
+import Router from  'vue-router'
 import components from '../common/components/';
+import '../modules/css/reset.scss';
+import hd from '../components/ComponentsHeader/src/ComponentsHeader';
 
 Vue.use(Router);
 
-const routes = [
-  { name: 'index', path: '/pages/index/index', component: Index }
-]
+const  routes:object[] = [];
+
 
 Object.entries(components).forEach((val: any) => {
-  let _key = val[0],
-    _val = val[1];
+  let _key = val[0];
 
   routes.push({
     name: _key,
     path: '/component/' + _key,
-    component: require('../common/components/'+ _key +'/__demo__/App.vue').default
+    components: {
+      default : require('../common/components/'+ _key +'/__demo__/App.vue').default,
+      hd : hd,
+      bd : require('../common/components/'+ _key +'/__demo__/App.vue').default
+    }
   });
 });
 
 const router = new Router({
-  routes 
-})
+  routes : Array.prototype.concat(routes,[
+    { 
+      name: 'index',
+      path: '/pages/index/index',
+      components: {
+        hd : hd,
+        bd : require('../views/index/index.vue').default
+      } 
+    }
+  ])
+});
 
-export default router
+export default  router

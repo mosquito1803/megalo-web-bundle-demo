@@ -16,8 +16,9 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class ComponentsHeader extends Vue {
-  @Prop({ default: "" })
-  private msg!: string;
+  get msg (){
+    return this.$route.name;
+  }
 }
 </script>
 

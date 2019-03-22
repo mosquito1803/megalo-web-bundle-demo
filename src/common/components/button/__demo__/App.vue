@@ -96,13 +96,6 @@
         </table>
       </div>
     </div>
-
-    <!-- <div class="area">
-      <p class="area-title">sku</p>
-      <div class="area-content">
-        <UiButton type="sku" selected>sku按钮</UiButton>
-      </div>
-    </div> -->
   </div>
 </template>
 
