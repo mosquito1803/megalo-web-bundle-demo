@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@import './lib/index';
+
+@include b(button) {
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  line-height: $--line-height-base;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  border-width: $--border-width-base;
+  border-style: $--border-style-base;
+  transition: $--transition-time-base;
+  @include utils-user-select(none);
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  & [class*="ui-icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  & span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @include m(default) {
+    @include button-variant(
+      $--font-color-default, $--fill-color-default, $--border-color-default,
+      $--font-color-default-active, $--fill-color-default-active, $--border-color-default-active,
+      $--font-color-default-disabled, $--fill-color-default-disabled, $--border-color-default-disabled,
+      );
+  }
+  @include m(primary) {
+    @include button-variant(
+      $--font-color-primary, $--fill-color-primary, $--border-color-primary,
+      $--font-color-primary-active, $--fill-color-primary-active, $--border-color-primary-active,
+      $--font-color-primary-disabled, $--fill-color-primary-disabled, $--border-color-primary-disabled,
+      );
+  }
+  @include m(special) {
+    @include button-variant(
+      $--font-color-special, $--fill-color-special, $--border-color-special,
+      $--font-color-special-active, $--fill-color-special-active, $--border-color-special-active,
+      $--font-color-special-disabled, $--fill-color-special-disabled, $--border-color-special-disabled,
+      );
+    @include button-size($--padding-vertical-special, $--padding-horizontal-special, $--font-size-base,$--line-height-base, 
+    auto, $--line-height-special, $--icon-size-base,$--icon-margin-base);
+  }
+  @include m(icon) {
+    @include button-variant(
+      $--font-color-icon, $--fill-color-icon, $--border-color-icon,
+      $--font-color-icon-active, $--fill-color-icon-active, $--border-color-icon-active,
+      $--font-color-icon-disabled, $--fill-color-icon-disabled, $--border-color-icon-disabled,
+      );
+  }
+  @include m(normal) {
+    @include button-size($--padding-vertical-normal, $--padding-horizontal-normal, $--font-size-base,$--line-height-base, 
+    auto, $-height-base, $--icon-size-base,$--icon-margin-base);
+    span {
+      min-width: p2r(112);
+    }
+  }
+  @include m(large) {
+    @include button-size($--padding-vertical-default, $--padding-horizontal-default, $--font-size-base,$--line-height-base, 
+    $--width-large, $--line-height-large, $--icon-size-base,$--icon-margin-large);
+    display: block;
+    margin: 0 auto;
+  }
+  @include m(block) {
+    @include button-size($--padding-vertical-default, $--padding-horizontal-default, $--font-size-base,$--line-height-base, 
+    $--width-large, $--line-height-large, $--icon-size-base,$--icon-margin-large);
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  @include m(round) {
+    @include button-radius($--border-radius-base)
+  }
+  @include m(square) {
+    @include button-radius($--border-radius)
+  }
+
+  @include m(text-default) {
+    border-width: 0;
+    border-color: transparent;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    @include button-text(
+      $--text-font-size-base, 
+      $--text-line-height-base,
+      $--text-color-default,
+      $--text-color-default-active,
+      $--text-color-default-disabled,
+    );
+  }
+  @include m(text-default) {
+    border-width: 0;
+    border-color: transparent;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include button-text(
+      $--text-font-size-base, 
+      $--text-line-height-base,
+      $--text-color-default,
+      $--text-color-default-active,
+      $--text-color-default-disabled,
+    );
+  }
+
+  @include m(text-special) {
+    border-width: 0;
+    border-color: transparent;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include button-text(
+      $--text-font-size-base, 
+      $--text-line-height-base,
+      $--text-color-special,
+      $--text-color-special-active,
+      $--text-color-special-disabled,
+    );
+  }
+
+  @include m(text-icon) {
+    border-width: 0;
+    border-color: transparent;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include button-text(
+      $--text-font-size-base, 
+      $--text-line-height-base,
+      $--text-color-icon,
+      $--text-color-icon-active,
+      $--text-color-icon-disabled,
+    );
+  }
+
+  @include m(text-primary) {
+    border-width: 0;
+    border-color: transparent;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include button-text(
+      $--text-font-size-base, 
+      $--text-line-height-base,
+      $--text-color-primary,
+      $--text-color-primary-active,
+      $--text-color-primary-disabled,
+    );
+  }
+}

@@ -1,0 +1,101 @@
+@function p2r($px, $base: 100) {
+  @if ($px == 'auto') {
+    @return $px;
+  } @else if ($px == 0){
+    @return 0;
+  } @else {
+    @return ($px / $base) * 1rem;
+  }
+}
+/**
+ * 按钮可配置项目
+ */
+@mixin button-variant(
+    $color, 
+    $background-color, 
+    $border-color,
+    $color-active,
+    $background-color-active,
+    $border-color-active,
+    $color-disabled,
+    $background-color-disabled,
+    $border-color-disabled,
+    ) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  &.is-active {
+    color: $color-active;
+    background-color: $background-color-active;
+    border-color: $border-color-active;
+    outline: none;
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-disabled;
+      background-color: $background-color-disabled;
+      border-color: $border-color-disabled;
+      cursor: not-allowed;
+      background-image: none;
+    }
+  }
+}
+
+@mixin button-radius($border-radius){
+  border-radius: p2r($border-radius)
+}
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size,$line-height, $width, $height,$icon-size, $--icon-margin) {
+  padding: p2r($padding-vertical) p2r($padding-horizontal);
+  height: p2r($height);
+  width: p2r($width);
+  & [class*="ui-icon-"] {
+    font-size: p2r($icon-size);
+    height: p2r($icon-size);
+    margin-right: p2r($--icon-margin);
+  }
+  & span {
+    font-size: p2r($font-size);
+    line-height: $line-height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@mixin button-text(
+    $font-size, 
+    $line-height,
+    $color,
+    $color-active,
+    $color-disabled,
+    ) {
+  & span {
+    font-size: $font-size;
+    line-height: $line-height;
+  
+    color: $color;
+  }
+
+  &:active,
+  &:focus {
+    & span {
+      color: $color-active;
+    }
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      & span {
+        color: $color-disabled;
+        cursor: not-allowed;
+        background-image: none;
+      }
+    }
+  }
+}

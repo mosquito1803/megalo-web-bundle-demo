@@ -1,0 +1,18 @@
+{
+  "name": "@olympus-test/main",
+  "version": "0.0.4",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "test": "__tests__"
+  },
+  "files": [
+    "*"
+  ],
+  "author": "",
+  "license": "MIT",
+  "gitHead": "7aae1fa149e648352771d9882d9d6cce1901cb86"
+}

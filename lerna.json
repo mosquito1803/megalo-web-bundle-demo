@@ -1,0 +1,17 @@
+{
+    "npmClient": "ppnpm",
+    "packages": [
+        "src/common/components/",
+        "src/common/components/*"
+    ],
+    "command": {
+        "publish": {
+            "ignoreChanges": [
+                "ignored-file",
+                "*.md"
+            ],
+            "message": "chore(release): publish"
+        }
+    },
+    "version": "0.0.1"
+}

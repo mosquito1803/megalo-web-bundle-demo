@@ -1,0 +1,135 @@
+/* size */
+$-height-base: 64 !default;
+$-height-specila: 72 !default;
+$--width-large: 690 !default;
+
+/* padding */
+
+$--padding-vertical-normal: 0 !default;
+$--padding-horizontal-normal: 30 !default;
+
+$--padding-vertical-special: 0 !default;
+$--padding-horizontal-special: 24 !default;
+
+$--padding-vertical-default: 0 !default;
+$--padding-horizontal-default: 0 !default;
+
+/* color */
+$--color-white: #FFFFFF !default;
+$--color-black: #333333 !default;
+
+/* fill */
+$--fill-color-default: transparent !default;
+$--fill-color-default-active: #F4F4F4  !default;
+$--fill-color-default-disabled: #CCCCCC !default;
+
+$--fill-color-primary: #B4282D !default;
+$--fill-color-primary-active: #A22929 !default;
+$--fill-color-primary-disabled: #B4282D !default;
+
+$--fill-color-special: transparent !default;
+$--fill-color-special-active: transparent !default;
+$--fill-color-special-disabled: transparent !default;
+
+$--fill-color-icon: transparent !default;
+$--fill-color-icon-active: #F4F4F4 !default;
+$--fill-color-icon-disabled: #CCCCCC !default;
+
+/* border */
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+
+$--border-color-default: #7F7F7F !default;
+$--border-color-default-active: #7F7F7F !default;
+$--border-color-default-disabled: transparent !default;
+
+$--border-color-primary: #B4282D !default;
+$--border-color-primary-active: #A22929 !default;
+$--border-color-primary-disabled: #B4282D !default;
+
+$--border-color-special: #7F7F7F !default;
+$--border-color-special-active: #B4282D !default;
+$--border-color-special-disabled: #CCCCCC !default;
+
+$--border-color-icon: #979797 !default;
+$--border-color-icon-active: #979797 !default;
+$--border-color-icon-disabled: #CCCCCC !default;
+
+$--border-radius-base: 4 !default;
+$--border-radius: 0 !default;
+
+/* font */
+$--font-size-base: 28 !default;
+$--font-wight-base: normal !default;
+$--line-height-base: 1 !default;
+$--line-height-normal: 64 !default;
+$--line-height-special: 72 !default;
+$--line-height-large:96 !default;
+$--line-height-block:96 !default;
+$--font-max-wight-base: 168 !default;
+$--font-max-wight-large: 730 !default;
+$--font-max-wight-block: 750 !default;
+$--font-max-wight-special: 602 !default;
+
+$--font-family: "Heiti SC","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",verdana !default;
+
+$--font-color-default: #333333 !default;
+$--font-color-default-active: #333333 !default;
+$--font-color-default-disabled: #FFFFFF !default;
+
+$--font-color-primary: #FFFFFF !default;
+$--font-color-primary-active: #FFFFFF !default;
+$--font-color-primary-disabled: #CB7A7A !default;
+
+$--font-color-special: #333333 !default;
+$--font-color-special-active: #BE4141 !default;
+$--font-color-special-disabled: #7F7F7F !default;
+
+$--font-color-icon: #333333 !default;
+$--font-color-icon-active: #333333 !default;
+$--font-color-icon-disabled: #ffffff !default;
+
+/* icon */
+$--icon-size-base: 40 !default;
+$--icon-margin-base:4 !default;
+$--icon-margin-large:16 !default;
+
+/* transition */
+$--transition-time-base: .1s !default;
+
+// /* text */
+$--text-font-size-base: 28 !default;
+$--text-line-height-base: 64 !default;
+
+$--text-color-default: $--color-black!default;
+$--text-color-primary: #FFFFFF !default;
+$--text-color-special: $--color-black !default;
+$--text-color-icon: $--color-black !default;
+
+$--text-color-default-active: $--color-black !default;
+$--text-color-primary-active: #FFFFFF !default;
+$--text-color-special-active: #B4282D !default;
+$--text-color-icon-active: $--color-black !default;
+
+$--text-color-default-disabled: #FFFFFF !default;
+$--text-color-primary-disabled: #CB7A7A !default;
+$--text-color-special-disabled: #7F7F7F !default;
+$--text-color-icon-disabled: #FFFFFF !default;
+
+$--text-decoration-default: none !default;
+$--text-decoration-primary: none !default;
+$--text-decoration-special: underline !default;
+$--text-decoration-icon: none !default;
+
+$--text-decoration-default-active: underline !default;
+$--text-decoration-primary-active: none !default;
+$--text-decoration-special-active: none !default;
+$--text-decoration-icon-active: underline !default;
+
+$--text-decoration-default-disabled: none !default;
+$--text-decoration-primary-disabled: none !default;
+$--text-decoration-special-underline-disabled: none !default;
+$--text-decoration-icon-disabled: none !default;
+
+
+
