@@ -12,6 +12,8 @@
     "allowJs": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "outDir": "dist",
+    "rootDir": "src",
     "types": [
       "webpack-env",
       "jest"

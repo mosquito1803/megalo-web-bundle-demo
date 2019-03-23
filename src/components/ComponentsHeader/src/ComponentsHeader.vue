@@ -22,7 +22,7 @@ export default class ComponentsHeader extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" platform="alipay">
 .m-hd{
   position: fixed;
   top:0;

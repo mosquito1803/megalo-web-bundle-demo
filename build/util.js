@@ -20,7 +20,6 @@ function pagesEntry () {
     fs.existsSync(demoPath) &&(entries[`pages/${dir}/index`] = resolve(demoPath));
   })
 
-
   return entries;
 }
 

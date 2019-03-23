@@ -50,6 +50,9 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "@megalo/entry": "^0.1.1",
     "@megalo/px2rpx-loader": "^0.1.1",
     "@megalo/template-compiler": "^0.7.3",
@@ -58,10 +61,8 @@
     "autoprefixer": "^9.4.7",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
     "copy-webpack-plugin": "^4.5.2",
+    "css": "^2.2.4",
     "css-loader": "^1.0.0",
     "cypress": "^3.2.0",
     "directory-named-webpack-plugin": "4.0.0",

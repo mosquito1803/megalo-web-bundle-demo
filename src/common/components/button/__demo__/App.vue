@@ -109,6 +109,9 @@ import UiButton from '../src/button.vue'
 export default class App extends Vue {
   
 }
+// export default {
+//   components: { UiButton }
+// }
 </script>
 
 <style lang="scss">

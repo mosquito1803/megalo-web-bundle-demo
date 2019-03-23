@@ -1,16 +1,22 @@
 <template>
   <div class="">
-    <div class="m-index">
-      <ul>
-        <li v-for="item in componentList" :key="item">
-          <template platform="wechat">
-            <a :href="'/pages/' + item + '/index'">{{ item }}</a>
-          </template>
-          <template platform="web">
-            <router-link :to="{name:item}">{{ item }}</router-link>
-          </template>
-        </li>
-      </ul>
+    <div class="g-hd">
+      <ComponentsHeader/>
+    </div>
+    <div class="g-bd">
+      <div class="m-index">
+        <ul>
+          <li v-for="item in componentList" :key="item">
+            <template platform="wechat">
+              <a :href="'/pages/' + item + '/index'">{{ item }}</a>
+            </template>
+            <template platform="web">
+              <router-link :to="{name:item}">{{ item }}</router-link>
+            </template>
+            <UiButton>dfsads</UiButton>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -24,19 +30,21 @@
 .m-component{position: relative;}
 </style>
 
-<script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-// import ComponentsHeader from '@/components/ComponentsHeader/';
+<script>
+import ComponentsHeader from '@/components/ComponentsHeader/src/ComponentsHeader';
+// import ComponentsFooter from '@/components/ComponentsFooter/index';
+import UiButton from '../../common/components/button/src/button.vue'
 import components from '@/common/components';
 
-// Vue.use(ComponentsHeader)
-
-@Component({})
-
-export default class index extends Vue {
-  
-  get componentList(){
-    return Object.keys(components);
+export default {
+  name: 'index',
+  components: {
+    ComponentsHeader, UiButton
+  },
+  computed:{
+    componentList(){
+      return Object.keys(components);
+    }
   }
 };
 </script>

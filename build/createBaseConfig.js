@@ -4,6 +4,7 @@ const compiler = require('@megalo/template-compiler')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path')
 
 const appMainFile = resolve('src/app.js')
 const CSS_EXT = {
@@ -19,10 +20,18 @@ const px2rpxLoader = {
   }
 }
 
+const rem2pxLoader = {
+  loader: path.join(__dirname, './rem2px-loader'),
+  options: {
+    pxUnit: 25
+  }
+}
+
 const cssLoaders = [
   MiniCssExtractPlugin.loader,
   'css-loader',
-  px2rpxLoader
+  px2rpxLoader,
+  rem2pxLoader
 ]
 
 function createBaseConfig( platform = 'wechat' ) {
