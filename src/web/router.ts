@@ -4,6 +4,9 @@ import components from '../common/components/';
 import '../modules/css/reset.scss';
 import hd from '../components/ComponentsHeader/src/ComponentsHeader';
 
+import PHEMEUI from '@olympus-test/main';
+Vue.use(PHEMEUI.PhButton);
+
 Vue.use(Router);
 
 const  routes:object[] = [];
