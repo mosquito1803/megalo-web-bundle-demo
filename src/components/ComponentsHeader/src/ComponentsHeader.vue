@@ -24,10 +24,6 @@ export default class ComponentsHeader extends Vue {
 
 <style lang="scss" platform="alipay">
 .m-hd{
-  position: fixed;
-  top:0;
-  left:0;
-  z-index:100;
   width:100%;
   height:1rem;
   text-align: center;

@@ -5,19 +5,21 @@ import '../modules/css/reset.scss';
 import hd from '../components/ComponentsHeader/src/ComponentsHeader';
 
 import PHEMEUI from '@olympus-test/main';
-Vue.use(PHEMEUI.PhButton);
+
+Object.entries(PHEMEUI).forEach((val: any) => {
+  Vue.use(val[1])
+});
 
 Vue.use(Router);
 
 const  routes:object[] = [];
-
 
 Object.entries(components).forEach((val: any) => {
   let _key = val[0];
 
   routes.push({
     name: _key,
-    path: '/component/' + _key,
+    path: "pages/"+ _key +"/index", 
     components: {
       default : require('../common/components/'+ _key +'/__demo__/App.vue').default,
       hd : hd,
@@ -39,4 +41,4 @@ const router = new Router({
   ])
 });
 
-export default  router
+export default router
