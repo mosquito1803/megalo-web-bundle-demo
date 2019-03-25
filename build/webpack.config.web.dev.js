@@ -20,7 +20,7 @@ module.exports = {
     mode: 'development',
 
     entry: {
-        'index': path.join(__dirname, `../src/web/entry.js`)
+        'index': path.join(__dirname, `../src/web/entry.ts`)
     },
 
     output: {

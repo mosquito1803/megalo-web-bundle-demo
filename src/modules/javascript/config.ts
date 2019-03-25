@@ -38,6 +38,12 @@ const categoryList:object[] = [
 const componentList:object[] = [
   {
     name : 'Button',
+    pathName : 'uibutton',
+    cname : '测试按钮(仅此有效)',
+    category : 0
+  },
+  {
+    name : 'Button',
     cname : '按钮',
     category : 0
   },

@@ -1,5 +1,5 @@
-import button from './button'
+import uibutton from './uibutton'
 
 export default {
-  button
+  uibutton
 };

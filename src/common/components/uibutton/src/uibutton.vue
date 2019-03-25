@@ -85,6 +85,6 @@ export default class UiButton extends Vue {
 }
 </script>
 
-<style lang="scss" src="./button.scss">
+<style lang="scss" src="./uibutton.scss">
 
 </style>

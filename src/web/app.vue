@@ -1,21 +1,19 @@
 <template>
   <div id="app">
-    <div class="g-hd">
-      <router-view name="hd"/>
-    </div>
-    <div class="g-bd">
-      <router-view name="bd"/>
-    </div>
+    <router-view name="hd"/>
+    <router-view name="bd"/>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'App'
+  name : "app"
 }
-</script>
+import { Component, Vue } from 'vue-property-decorator';
 
-<style>
-.g-hd{position:fixed;top:0;left:0;width:100%;height:1rem;}
-.g-bd{margin-top:1rem;}
-</style>
+// @Component
+
+// export default class APP extends Vue {
+    
+// }
+</script>
