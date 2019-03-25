@@ -2,7 +2,7 @@
   <div class="g-bd">
     <div class="m-index">
       <ul>
-        <li v-for="item in cList" :key="item">
+        <li v-for="item in cList">
           <!-- <template platform="wechat">
             <a :href="'/pages/' + item + '/index'">{{ item }}</a>
           </template> -->

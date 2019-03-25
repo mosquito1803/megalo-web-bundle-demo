@@ -2,7 +2,7 @@
   <div class="g-bd g-bd-nomargin">
     <div class="m-index">
       <ul>
-        <li v-for="item in categoryL" :key="item">
+        <li v-for="item in categoryL">
           <!-- <template platform="wechat">
             <a :href="'/pages/' + item + '/index'">{{ item }}</a>
           </template> -->
