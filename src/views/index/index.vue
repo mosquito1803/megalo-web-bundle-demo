@@ -35,7 +35,8 @@ export default class index extends Vue {
         _router:any = this.$router;
       _router.push({
         name : 'category',
-        params: {id : v}
+        path : '/pages/category/',
+        query: {id : v}
       })
     }
 };

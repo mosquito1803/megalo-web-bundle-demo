@@ -18,7 +18,7 @@ const  routes:object[] = [];
 // 挂在所有当前组件库所有的组件分类路由
 routes.push({
   name: 'category',
-  path: "/pages/category/:id",
+  path: "/pages/category/",
   components: {
     hd : hd,
     bd : require('../views/category/index.vue').default

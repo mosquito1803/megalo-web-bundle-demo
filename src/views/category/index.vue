@@ -26,7 +26,7 @@ export default class category extends Vue {
     let _list:Object[] = [],
       _route:any = this.$route;
     config.componentList.forEach((val:any) => {
-      if(val.category == _route.params.id){
+      if(val.category == _route.query.id){
         _list.push(val);
       }
     });
