@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      },
+      "debug": false
+    }]
+  ],
+  "plugins": [
+    ["@babel/transform-runtime", {
+      "helpers": false,
+      "regenerator": true   
+    }],
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}
