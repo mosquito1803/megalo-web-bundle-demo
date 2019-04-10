@@ -20,8 +20,12 @@ module.exports = {
     mode: 'production',
 
     entry: {
-        'index': path.join(__dirname, `../src/web/entry.js`)
+        'index': path.join(__dirname, '../dist-web/webEntry.js')
     },
+
+    target: createMegaloTarget({
+        platform
+    }),
 
     output: {
         path: _.resolve(`dist-web`),

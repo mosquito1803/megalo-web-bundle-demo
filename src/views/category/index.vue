@@ -3,9 +3,9 @@
     <div class="m-index">
       <ul>
         <li v-for="item in cList">
-          <!-- <template platform="wechat">
-            <a :href="'/pages/' + item + '/index'">{{ item }}</a>
-          </template> -->
+          <template platform="wechat">
+            <a :href="'/views/' + item + '/__demo/App'">{{ item }}</a>
+          </template>
           <template platform="web">
             <PhList :title="item.cname" icon="right" leftIcon="time" @click.handleClick='handleClick(item.pathName)'></PhList>
           </template>
@@ -18,6 +18,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import config from '@/modules/javascript/config';
+import PhList from '@/components/'
 
 @Component
 

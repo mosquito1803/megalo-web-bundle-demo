@@ -10,9 +10,8 @@ app.$mount()
 export default {
   config: {
     pages: [
-      'pages/index',
-      'pages/category',
-      'pages/component'
+      'views/index/index',
+      'views/category/index'
     ],
     window: {
       backgroundTextStyle: 'light',

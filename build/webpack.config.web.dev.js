@@ -1,6 +1,4 @@
-const { pagesEntry } = require('@megalo/entry')
 const createMegaloTarget = require('@megalo/target')
-const compiler = require('@megalo/template-compiler')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -19,8 +17,12 @@ const platform = "web";
 module.exports = {
     mode: 'development',
 
+    target: createMegaloTarget({
+        platform
+    }),
+
     entry: {
-        'index': path.join(__dirname, `../src/web/entry.ts`)
+        'index': path.join(__dirname, '../dist-web/webEntry.js')
     },
 
     output: {
@@ -45,7 +47,6 @@ module.exports = {
     },
 
     devServer: {
-        writeToDisk: true,
         open: true
     },
 
