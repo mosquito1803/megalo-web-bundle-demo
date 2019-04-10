@@ -1,0 +1,14 @@
+@function p2r($px, $base: 100) {
+  @if ($px == 'auto') {
+    @return $px;
+  } @else if ($px == 0){
+    @return 0;
+  } @else if ($px == 1){
+    @return $px * 1px;
+  } @else {
+    @return ($px / $base) * 1rem;
+  }
+}
+@mixin icon-size($--font-size) {
+  font-size: $--font-size;
+}

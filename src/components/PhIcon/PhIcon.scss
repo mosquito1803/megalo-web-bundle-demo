@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import './lib/index';
+
+@include b(icon) {
+    font-size: p2r($--font-size);
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    -webkit-tap-highlight-color: transparent;
+    &>svg {
+        -webkit-tap-highlight-color: transparent;
+        display: block;
+    }
+}
+
+

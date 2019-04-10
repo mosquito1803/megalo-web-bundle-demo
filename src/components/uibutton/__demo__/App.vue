@@ -103,7 +103,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import UiButton from '../src/uibutton.vue'
+import UiButton from '../index.vue'
 
 @Component({
   components: { UiButton }

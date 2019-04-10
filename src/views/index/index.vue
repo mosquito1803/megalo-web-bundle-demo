@@ -17,11 +17,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import components from '@/common/components/';
-import config from '@/modules/javascript/config';
+import PhList from "@/components/PhList/index.vue";
+import config from "@/modules/javascript/config";
+import components from "@/components"
 
-@Component
-
+@Component({
+  components: { PhList }
+})
 export default class index extends Vue {
   get categoryL(){
     return config.categoryList;
@@ -30,14 +32,9 @@ export default class index extends Vue {
   get componentL(){
     return Object.keys(components);
   }
+
   handleClick(v:number){
-      let _route:any = this.$route,
-        _router:any = this.$router;
-      _router.push({
-        name : 'category',
-        path : '/pages/category/',
-        query: {id : v}
-      })
-    }
+    location.hash = "#/views/category/index";    
+  }
 };
 </script>
