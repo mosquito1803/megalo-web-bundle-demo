@@ -116,9 +116,9 @@ module.exports = {
             filename: 'index.html',
             template: 'src/web/index.html'
         }),
-        new webpack.ProvidePlugin({
-            'Megalo': [path.resolve(`./node_modules/@megalo/api/platforms/${platform}`), 'default']
-        })
+        // new webpack.ProvidePlugin({
+        //     'Megalo': [path.resolve(`./node_modules/@megalo/api/platforms/${platform}`), 'default']
+        // })
     ],
 
     stats: {
