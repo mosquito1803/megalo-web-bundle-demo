@@ -1,10 +1,12 @@
-const { resolve, pagesEntry } = require('./util')
+const { resolve } = require('./util')
+const { pagesEntry } = require('@megalo/entry')
 const createMegaloTarget = require('@megalo/target')
 const compiler = require('@megalo/template-compiler')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
+const webpack = require('webpack')
 
 const appMainFile = resolve('src/app.js')
 const CSS_EXT = {
@@ -23,7 +25,7 @@ const px2rpxLoader = {
 const rem2pxLoader = {
   loader: path.join(__dirname, './rem2px-loader'),
   options: {
-    pxUnit: 25
+    pxUnit: 50
   }
 }
 
@@ -135,10 +137,21 @@ function createBaseConfig( platform = 'wechat' ) {
       }),
       new CopyWebpackPlugin([{
         from: 'src/assets', to: 'assets'
-      }])
+      }]),
+      new webpack.ProvidePlugin({
+        'Megalo': [path.resolve(`./node_modules/@megalo/api/platforms/${platform}`), 'default']
+      })
     ],
 
-    stats: 'errors-only'
+    stats: {
+      all: false,
+      modules: false,
+      maxModules: 0,
+      errors: true,
+      warnings: true,
+      moduleTrace: false,
+      errorDetails: true
+  }
   }
 }
 

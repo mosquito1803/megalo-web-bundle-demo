@@ -147,7 +147,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import PhIcon from "../index";
+import PhIcon from "../";
 
 @Component({
   components: { PhIcon }

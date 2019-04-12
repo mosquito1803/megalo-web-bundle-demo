@@ -38,7 +38,7 @@ const categoryList:object[] = [
 const componentList:object[] = [
   {
     name : 'Button',
-    pathName : 'uibutton',
+    pathName : 'uiButton',
     cname : '测试按钮(仅此有效)',
     category : 0
   },

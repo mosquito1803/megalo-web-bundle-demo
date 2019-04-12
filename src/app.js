@@ -11,12 +11,15 @@ export default {
   config: {
     pages: [
       'views/index/index',
-      'views/category/index'
+      'views/category/index',
+      'components/PhIcon/__demo__/App',
+      'components/PhList/__demo__/App',
+      'components/uiButton/__demo__/App'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'megalo-frame',
+      navigationBarTitleText: 'megalo-demo',
       navigationBarTextStyle: 'black'
     }
   }

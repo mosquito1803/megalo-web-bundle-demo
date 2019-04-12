@@ -2,7 +2,7 @@
     "name": "@olympus-test/PhList",
     "version": "0.0.6",
     "description": "",
-    "main": "index.vue",
+    "main": "index.test.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
     },

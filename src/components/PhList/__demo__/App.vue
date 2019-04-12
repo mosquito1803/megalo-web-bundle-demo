@@ -144,7 +144,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import PhList from '../index'
+import PhList from '../'
 
 @Component({
   components: { PhList }

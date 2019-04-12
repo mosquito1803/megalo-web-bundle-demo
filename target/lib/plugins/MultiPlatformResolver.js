@@ -17,7 +17,9 @@ class MultiPlatformResolver {
                 let requestPath = request.request,
                     dirPath = request.path,
                     fileNameExp = new RegExp(`([\\w\\.-]+)(\\/index\\.${extension}$)`);
-     
+
+                    requestPath.indexOf('Phlist') != -1 && console.log(requestPath)
+                
                 // looking for file according to the following order:
                 //
                 // 1. file for current platform index.${platform}.js
@@ -57,6 +59,13 @@ class MultiPlatformResolver {
 
                 return callback();
             })
+
+            resolver.getHook('resolved')
+                .tapAsync("MultiPlatformResolver", (request, resolveContext, callback) => {
+                    request.path.indexOf('Phlist') != -1 && console.log(request.path)
+
+                    return callback();
+                })
     }
 }
 

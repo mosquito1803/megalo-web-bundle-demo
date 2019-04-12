@@ -3,7 +3,7 @@ const { getOptions } = require('loader-utils');
 
 module.exports = function (source) {
     const options = getOptions(this);
-    const pxUnit = options.pxUnit || 25;
+    const pxUnit = options.pxUnit || 50;
 
     let ast = css.parse(source);
 

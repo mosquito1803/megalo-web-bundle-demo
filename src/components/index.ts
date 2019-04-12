@@ -1,7 +1,7 @@
-import uibutton from './uibutton'
+import uiButton from './uiButton'
 import PhList from './PhList'
 
 export default {
-  uibutton,
+  uiButton,
   PhList
 };

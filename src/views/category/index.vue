@@ -3,17 +3,12 @@
     <div class="m-index">
       <ul>
         <li v-for="item in cList">
-          <template platform="wechat">
-            <a :href="'/views/' + item + '/__demo/App'">{{ item }}</a>
-          </template>
-          <template platform="web">
-            <PhList
-              :title="item.cname"
-              icon="right"
-              leftIcon="time"
-              @click.handleClick="handleClick(item.pathName)"
-            ></PhList>
-          </template>
+          <PhList
+            :title="item.cname"
+            icon="right"
+            leftIcon="time"
+            @click.handleClick="handleClick(item.pathName)"
+          ></PhList>
         </li>
       </ul>
     </div>
@@ -23,7 +18,8 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import config from "@/modules/javascript/config";
-import PhList from "@/components/PhList/index.vue";
+import PhList from "@/components/PhList";
+import test from "@/modules/javascript/test"
 
 @Component({
   components: { PhList }
@@ -33,8 +29,18 @@ export default class category extends Vue {
     return config.componentList;
   }
 
+  created () {
+    test.test();
+  }
+
   handleClick(v: string) {
-    location.hash = '#/views/' + v + '/__demo/App';
+    if (Megalo.ENV_TYPE.WEB == Megalo.getEnv()) { // web
+      location.hash = '#/components/' + v + '/__demo__/App';
+    } else {
+      Megalo.navigateTo({
+        url: '/components/' + v + '/__demo__/App'
+      })
+    }
   }
 }
 </script>

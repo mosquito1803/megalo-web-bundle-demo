@@ -103,17 +103,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import UiButton from '../index.vue'
+import UiButton from '../'
 
 @Component({
   components: { UiButton }
 })
 export default class App extends Vue {
-  
+
 }
-// export default {
-//   components: { UiButton }
-// }
 </script>
 
 <style lang="scss">

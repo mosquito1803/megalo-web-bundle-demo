@@ -1,29 +1,5 @@
-# megalo-frame
+# megalo-demo
 
-## 描述
+## 说明
 
-a megalo project
-
-## 作者
-
-陈诗文 <mosquito1403@163.com>
-
-## 运行
-
-微信小程序：
-
-```bash
-npm run dev:wechat
-```
-
-支付宝小程序：
-
-```bash
-npm run dev:alipay
-```
-
-百度智能小程序：
-
-```bash
-npm run dev:swan
-```
+本地`npm install`之后，`sudo npm link ./target`，然后通过`npm run dev:web`和`npm run dev:wechat`启动web和微信小程序开发环境调试
