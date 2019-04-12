@@ -34,10 +34,10 @@ export default class category extends Vue {
   }
 
   handleClick(v: string) {
-    if (Megalo.ENV_TYPE.WEB == Megalo.getEnv()) { // web
+    if (window && location) { // web
       location.hash = '#/components/' + v + '/__demo__/App';
     } else {
-      Megalo.navigateTo({
+      wx.navigateTo({
         url: '/components/' + v + '/__demo__/App'
       })
     }

@@ -29,10 +29,10 @@ export default class index extends Vue {
   }
 
   handleClick(v:number){
-    if (Megalo.ENV_TYPE.WEB == Megalo.getEnv()) { // web
+    if (window && location) { // web
       location.hash = "#/views/category/index";    
     } else {
-      Megalo.navigateTo({
+      wx.navigateTo({
         url: "/views/category/index"
       })
     }
