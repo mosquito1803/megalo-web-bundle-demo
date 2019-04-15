@@ -93,7 +93,6 @@
   "dependencies": {
     "@megalo/api": "^0.2.3",
     "@megalo/target": "^0.7.1",
-    "@megalo/ui": "^1.0.0",
     "@megalo/vhtml-plugin": "^0.1.2",
     "megalo": "^0.9.0",
     "octoparse": "^0.3.2",
