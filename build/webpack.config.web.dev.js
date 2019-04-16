@@ -10,7 +10,19 @@ const path = require('path');
 
 const cssLoaders = [
     MiniCssExtractPlugin.loader,
-    'css-loader'
+    'css-loader',
+    {
+        loader: 'postcss-loader', 
+        options: { 
+            plugins: () => [
+                require('autoprefixer')(),
+                require('postcss-plugin-px2rem')({ 
+                    rootValue: 75,
+                    propBlackList: ['border']
+                })
+            ]
+        }
+    }
 ]
 
 const platform = "web";
