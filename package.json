@@ -6,6 +6,7 @@
     "build:wechat": "megalo-cli-service build",
     "build:alipay": "megalo-cli-service build --platform alipay",
     "build:swan": "megalo-cli-service build --platform swan",
+    "dev:web": "megalo-cli-service build --platform web",
     "build:toutiao": "megalo-cli-service build --platform toutiao",
     "dev:wechat": "megalo-cli-service serve",
     "dev:alipay": "megalo-cli-service serve --platform alipay",
