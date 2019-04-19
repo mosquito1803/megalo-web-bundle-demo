@@ -15,9 +15,24 @@ import { Component, Vue } from 'vue-property-decorator';
 import PhList from "@/components/PhList";
 import config from "@/modules/javascript/config";
 import components from "@/components"
+import api from "@/modules/javascript/api"
 
 @Component({
-  components: { PhList }
+  components: { PhList },
+  onShow () {
+    console.log('show')
+  },
+  onPageScroll () {
+    console.log('scroll')
+  },
+  onShareAppMessage () {
+    return {
+      title: "测试分享"
+    }
+  },
+  created () {
+    api.init()
+  }
 })
 export default class index extends Vue {
   get categoryL(){

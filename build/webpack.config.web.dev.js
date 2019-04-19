@@ -1,4 +1,4 @@
-const createMegaloTarget = require('@megalo/target')
+const createMegaloTarget = require('megalo-target-debug')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -91,6 +91,11 @@ module.exports = {
             },
 
             {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+
+            {
                 test: /\.css$/,
                 use: cssLoaders
             },
@@ -128,9 +133,9 @@ module.exports = {
             filename: 'index.html',
             template: 'src/web/index.html'
         }),
-        // new webpack.ProvidePlugin({
-        //     'Megalo': [path.resolve(`./node_modules/@megalo/api/platforms/${platform}`), 'default']
-        // })
+        new webpack.ProvidePlugin({
+            'Megalo': [_.resolve(`./node_modules/@megalo/api/platforms/${platform}`), 'default']
+        })
     ],
 
     stats: {

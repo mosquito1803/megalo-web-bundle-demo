@@ -1,6 +1,7 @@
 
 <script>
   export default {
-    mpType: 'app'
+    mpType: 'app',
+    onShow () {}
   }
 </script>

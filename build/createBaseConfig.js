@@ -1,6 +1,6 @@
 const { resolve } = require('./util')
 const { pagesEntry } = require('@megalo/entry')
-const createMegaloTarget = require('@megalo/target')
+const createMegaloTarget = require('megalo-target-debug')
 const compiler = require('@megalo/template-compiler')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -101,8 +101,13 @@ function createBaseConfig( platform = 'wechat' ) {
         },
 
         {
-          test: /\.js|\.tsx?$/,
+          test: /(\.js|\.tsx?)$/,
           use: 'babel-loader'
+        },
+
+        {
+          test: /\.json$/,
+          loader: 'json-loader'
         },
 
         {

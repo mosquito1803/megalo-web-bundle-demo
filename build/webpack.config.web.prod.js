@@ -1,5 +1,5 @@
 const { pagesEntry } = require('./util')
-const createMegaloTarget = require('@megalo/target')
+const createMegaloTarget = require('megalo-target-debug')
 const compiler = require('@megalo/template-compiler')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
