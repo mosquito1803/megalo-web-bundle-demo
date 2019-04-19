@@ -94,7 +94,7 @@
     "@megalo/api": "^0.5.2",
     "@megalo/vhtml-plugin": "^0.1.2",
     "json-loader": "^0.5.7",
-    "megalo": "^0.10.0",
+    "megalo": "0.10.0",
     "megalo-target-debug": "latest",
     "octoparse": "^0.3.2",
     "vue": "2.5.17",

@@ -33,7 +33,7 @@ module.exports = {
     mode: 'production',
 
     entry: {
-        'index': path.join(__dirname, '../dist-web/webEntry.js')
+        'index': path.join(__dirname, '../.megalo-tmp/webEntry.js')
     },
 
     target: createMegaloTarget({
